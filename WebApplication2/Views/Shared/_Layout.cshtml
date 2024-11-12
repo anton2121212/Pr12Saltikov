@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication2</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/shared.css" />
+</head>
+<body>
+    <div id="header-top">
+        <div class="logo">StroyMarket</div>
+        <div class="button-header">
+            <button class="button">Войти</button>
+
+        </div>
+    </div>
+
+    <img class="img-header" src="~/images/img2.jpg" />
+
+
+
+
+    <div id="header-botton">
+        <div class="menu">
+            <ul>
+                <li><a asp-controller="Home" asp-action="SiteInformation">Главная</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                <li><a href="#o nas">О нас</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <script src="~/js/shared_script.js"></script>
+
+
+    <script src="~/js/shared_script.js" asp-append-version="true"></script>
+    <script src="~/js/home_script.js" asp-append-version="true"></script>
+</body>
+</html>
