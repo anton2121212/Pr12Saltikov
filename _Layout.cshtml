@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication2</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/shared.css" />
+    <link rel="stylesheet" href="~/css/login_and_registration.css"/>
+</head>
+<body>
+
+    @await Html.PartialAsync("LoginRegistrationPartial")
+
+    <div id="header-top">
+        <div class="logo">StroyMarket</div>
+        <div class="button-header">
+            <button class="button" id="click-to-hide">Войти</button>
+
+        </div>
+    </div>
+
+    <img class="img-header" src="~/images/img2.jpg" />
+
+
+
+
+    <div id="header-botton">
+        <div class="menu">
+            <ul>
+                <li><a asp-controller="Home" asp-action="SiteInformation">Главная</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Контакты</a></li>
+                <li><a asp-controller="Home" asp-action="Aboutus">О нас</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    
+    <script src="~/js/shared_script.js"></script>
+    
+
+    <script src="~/js/shared_script.js" asp-append-version="true"></script>
+    <script src="~/js/home_script.js" asp-append-version="true"></script>
+    <script src="~/js/login_and_registration_script.js" asp-append-version="true"></script>
+    <footer>
+    <div class="footer-left">
+        <div class="logo">StroyMarket</div>
+        <p>
+            Компания StroyMarket — надежный партнер в сфере поставок строительных материалов, который уже много лет успешно работает на рынке. Мы предлагаем широкий ассортимент качественной продукции для строительства и ремонта, включая материалы для внутренней отделки, фасадных работ, кровли, гидроизоляции и многое другое.
+        </p>
+        <div class="footer-TravelAgency">
+            &copy; 2024 - StroyMarket
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <div class="menu">
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#aboutus">О нас</a></li>
+
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
